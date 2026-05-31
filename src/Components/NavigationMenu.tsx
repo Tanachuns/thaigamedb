@@ -1,5 +1,5 @@
 
-import type { Component, JSX } from 'react'
+import type {  JSX } from 'react'
 import { NavLink } from 'react-router'
 
 type Props = {
