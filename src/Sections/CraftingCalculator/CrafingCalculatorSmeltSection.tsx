@@ -12,12 +12,16 @@ type Task = {
 };
 
 type Result = {
+  product:string|undefined
+  amount: number;
   staminacost: number;
   tasks: Task[];
 };
 
 export default function CrafingCalculatorSmeltSection() {
   const [result, setResult] = useState<Result>({
+    product:"",
+    amount:0,
     staminacost: 0,
     tasks: [],
   });
@@ -39,6 +43,8 @@ export default function CrafingCalculatorSmeltSection() {
     }
 
     const _result: Result = {
+      product:smelt_product,
+      amount:productAmount,
       staminacost: 0,
       tasks: [],
     };
@@ -56,6 +62,7 @@ export default function CrafingCalculatorSmeltSection() {
     if (!_result.staminacost) {
       setErrorMsg("เกิดข้อผิดพลาด");
     }
+    _result.product = product?.title;
     setResult(_result);
   };
 
@@ -65,6 +72,8 @@ export default function CrafingCalculatorSmeltSection() {
 
   const resetForm = () => {
     setResult({
+      product:"",
+      amount:0,
       staminacost: 0,
       tasks: [],
     });
@@ -102,6 +111,7 @@ export default function CrafingCalculatorSmeltSection() {
       </form>
       <div className="divider"></div>
       <b className="text-xl">ผลลัพธ์</b>
+      <p>{result.product} {result.amount} ชิ้น</p>
       {result.tasks.map((m,i) => {
         return (
           <p key={i}>
