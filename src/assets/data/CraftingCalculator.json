@@ -1,0 +1,25 @@
+[
+    {
+        "name":"Weapon_Enhanced_Matal_I",
+        "title":"Weapon Enhanced Matal I",
+        "cft_cost":10,
+        "materials":[
+            {
+                "name":"Enhanced_Ore_Lv1",
+                "title":"Enhanced Ore Lv.1",
+                "source":"Enhanced Ore Lv.1",
+                "gat_cost":50,
+                "yield":8,
+                "mat_cost":15
+            },
+             {
+                "name":"Tree_Root",
+                "title":"Tree Root",
+                "source":"Green Herb/ Carrot",
+                "gat_cost":10,
+                "yield":1,
+                "mat_cost":5
+            }
+        ]
+    }
+]

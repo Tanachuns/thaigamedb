@@ -35,38 +35,42 @@ export default function MainLayout({ children }: Props) {
             <div className="px-4">ThaiGaneDB.gg</div>
           </div>
 
-        <label className="flex cursor-pointer gap-2">
- 
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round">
-    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-  </svg>
-  <input type="checkbox" value="light" className="toggle theme-controller" />
-   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round">
-    <circle cx="12" cy="12" r="5" />
-    <path
-      d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
-  </svg>
-</label>
+          <label className="flex cursor-pointer gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <input
+              type="checkbox"
+              value="light"
+              className="toggle theme-controller"
+            />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+            </svg>
+          </label>
         </nav>
-        <div className="p-4">{children}</div>
+        <div className="min-h-screen p-4 md:p-6">{children}</div>
       </div>
       <div className="drawer-side is-drawer-close:overflow-visible">
         <label
@@ -79,18 +83,37 @@ export default function MainLayout({ children }: Props) {
           <ul className="menu w-full grow">
             {/* List item */}
             <NavLink to="/row/">
-                <li>
-              <div
-                className="is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default bg-contain
+              <li>
+                <div
+                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default bg-contain
                  bg-[url(https://static.wikia.nocookie.net/ragnarok_gamepedia_en/images/6/68/Ragnarok2GOTW_logo.png/revision/latest/scale-to-width-down/567?cb=20171024051658)]"
-              >
-                <span className="is-drawer-close:hidden">game1</span>
-              </div>
-            </li>
+                >
+                  <span className="is-drawer-close:hidden">game1</span>
+                </div>
+              </li>
             </NavLink>
-        
+
             <br />
-            <NavigationMenu title="คำนวนของคราฟ" link="/row/CraftingCalculator"/>
+            <NavigationMenu
+              title="Life Job Calculator"
+              link="/row/CraftingCalculator"
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="my-1.5 inline-block size-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z"
+                  />
+                </svg>
+              }
+            />
           </ul>
         </div>
       </div>
