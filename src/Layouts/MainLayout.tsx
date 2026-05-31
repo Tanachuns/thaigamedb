@@ -89,19 +89,21 @@ export default function MainLayout({ children }: Props) {
           {/* Sidebar content here */}
           <ul className="menu w-full grow">
             {/* List item */}
-            <NavLink to="/row/">
+            <NavLink to="/row/" >
               <li>
                 <div
-                  className={`is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default `}
+                  className={`is-drawer-close:tooltip   is-drawer-close:tooltip-right min-h-[4em]  `}
                     style={{
                     backgroundImage: `url(${getImage("ragnaroktheneworldhead.png")})`,
                   }}
                 >
-                  
                 </div>
+                
               </li>
             </NavLink>
-
+            <div className="bg-black text-center is-drawer-close:hidden cursor-default">
+                Ragnarok: The New World
+            </div>
             <br />
             <NavigationMenu
               title="Life Job Calculator"

@@ -11,9 +11,9 @@ type Props = {
 export const NavigationMenu = (props: Props) => {
   return (
         <li>
-               <NavLink to={props.link}>
+              <NavLink to={props.link}>
               <button
-                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right cursor-pointer"
                 data-tip= {props.title}
               >
                 {props.icon}
@@ -22,6 +22,6 @@ export const NavigationMenu = (props: Props) => {
                 </span>
               </button>
               </NavLink>
-            </li>
+     </li>
   )
 }
