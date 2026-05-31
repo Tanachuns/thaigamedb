@@ -1,8 +1,8 @@
 import { useState } from "react";
-import Weapon_Enhanced_Matal_I from "../../assets/images/Weapon_Enhanced_Matal_I.png";
 import products from "../../assets/data/CraftingCalculator.json";
+import CraftingProductRadio from "../../Components/CraftingProductRadio";
+import { getImage } from "../../Helpers/ImageHelper";
 
-type Props = {};
 
 type Task = {
   name: string;
@@ -14,7 +14,7 @@ type Result = {
   tasks: Task[];
 };
 
-export default function CrafingCalculatorSmeltSection({}: Props) {
+export default function CrafingCalculatorSmeltSection() {
   const [result, setResult] = useState<Result>({
     staminacost: 0,
     tasks: [],
@@ -43,7 +43,7 @@ export default function CrafingCalculatorSmeltSection({}: Props) {
     // =(((mat_cost/yield)*gat_cost)+...)+cft_cost
     const product = products.find((f) => f.name === smelt_product);
     product?.materials.forEach((m) => {
-      const gather = Math.ceil(m.mat_cost / m.yield) * productAmount;
+      const gather = m.mat_cost / m.yield * productAmount;
       _result.staminacost += gather * m.gat_cost;
       _result.tasks.push({ name: m.source, amount: gather });
     });
@@ -65,82 +65,25 @@ export default function CrafingCalculatorSmeltSection({}: Props) {
       tasks: [],
     });
   };
-
+  console.table(products[0].name)
   return (
     <div className=" m-2 p-4">
       <form onSubmit={(e) => calHandler(e)}>
         <h2 className="text-xl">Enchance Material</h2>
-        <div className="flex gap-2">
-          <div className="tooltip" data-tip="Weapon Enhanced Metal I">
-            <label className="cursor-pointer">
-              <input
-                onClick={() => resetError()}
-                type="radio"
-                name="smelt_product"
-                value={"Weapon_Enhanced_Matal_I"}
-                className="peer hidden"
-              />
-
-              <img
-                src={Weapon_Enhanced_Matal_I}
-                alt="Weapon Enhanced Metal I"
-                className="
-                        w-16 h-16 rounded
-                        border-2 border-transparent
-                        peer-checked:border-primary
-                        peer-checked:ring-2
-                        peer-checked:ring-primary
-                        transition
-                      "
-              />
-            </label>
-          </div>
-          <div className="tooltip" data-tip="Weapon Enhanced Metal II">
-            <label className="cursor-pointer">
-              <input
-                onClick={() => resetError()}
-                type="radio"
-                name="smelt_product"
-                value={"Weapon_Enhanced_Matal_II"}
-                className="peer hidden"
-              />
-
-              <img
-                src={Weapon_Enhanced_Matal_I}
-                alt="Weapon Enhanced Metal II"
-                className="
-                        w-16 h-16 rounded
-                        border-2 border-transparent
-                        peer-checked:border-primary
-                        peer-checked:ring-2
-                        peer-checked:ring-primary
-                        transition
-                      "
-              />
-            </label>
-          </div>
+        <div className="grid gap-2 grid-cols-4 w-fit">
+          {products.map((p,i)=>{
+            return <CraftingProductRadio key={i} image={getImage(p.name)} inputName="smelt_product" inputValue={p.name} name={p.title} resetError={resetError}  />
+          })}
         </div>
         จำนวน
-        <div className="">
-          <button
-            onClick={() => resetError()}
-            className="btn btn-primary  font-bold"
-          >
-            -
-          </button>
+        <div>
           <input
             onFocus={() => resetError()}
             type="number"
             defaultValue={1}
             name="product_amount"
-            className="input border-r-0 input-primary w-25 text-center "
+            className="input input-primary w-25 text-center "
           />
-          <button
-            onFocus={() => resetError()}
-            className="btn btn-primary font-bold"
-          >
-            +
-          </button>
         </div>
         <button type="submit" className="mt-1 btn btn-warning">
           คำนวน
@@ -159,11 +102,11 @@ export default function CrafingCalculatorSmeltSection({}: Props) {
       {result.tasks.map((m) => {
         return (
           <p>
-            {m.name}: {m.amount} ครั้ง
+           <b>{m.name}:</b> {m.amount} ครั้ง
           </p>
         );
       })}
-      <p>Stermina ที่ใช้: {result.staminacost}</p>
+      <p><b>Stermina ที่ใช้:</b> {result.staminacost}</p>
     </div>
   );
 }

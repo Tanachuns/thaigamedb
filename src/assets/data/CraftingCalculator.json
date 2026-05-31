@@ -21,5 +21,94 @@
                 "mat_cost":5
             }
         ]
+    },
+      {
+        "name":"Weapon_Enhanced_Matal_II",
+        "title":"Weapon Enhanced Matal II",
+        "cft_cost":10,
+        "materials":[
+            {
+                "name":"Enhanced_Ore_Lv2",
+                "title":"Enhanced Ore Lv.2",
+                "source":"Enhanced Ore Lv.2",
+                "gat_cost":50,
+                "yield":8,
+                "mat_cost":15
+            },
+             {
+                "name":"Herb_of_Incantation",
+                "title":"Herb of Incantation",
+                "source":"Blue Herb/ Apple",
+                "gat_cost":10,
+                "yield":1,
+                "mat_cost":5
+            }
+        ]
+    },  {
+        "name":"Weapon_Enhanced_Matal_II",
+        "title":"Weapon Enhanced Matal II",
+        "cft_cost":10,
+        "materials":[
+            {
+                "name":"Enhanced_Ore_Lv2",
+                "title":"Enhanced Ore Lv.2",
+                "source":"Enhanced Ore Lv.2",
+                "gat_cost":50,
+                "yield":8,
+                "mat_cost":15
+            },
+             {
+                "name":"Herb_of_Incantation",
+                "title":"Herb of Incantation",
+                "source":"Blue Herb/ Apple",
+                "gat_cost":10,
+                "yield":1,
+                "mat_cost":5
+            }
+        ]
+    }, {
+        "name":"Weapon_Enhanced_Matal_III",
+        "title":"Weapon Enhanced Matal III",
+        "cft_cost":10,
+        "materials":[
+            {
+                "name":"Enhanced_Ore_Lv3",
+                "title":"Enhanced Ore Lv.3",
+                "source":"Enhanced Ore Lv.3",
+                "gat_cost":50,
+                "yield":8,
+                "mat_cost":15
+            },
+             {
+                "name":"Four_Leaf_Clover",
+                "title":"Four-Leaf Clover",
+                "source":"Yellow Herb/ Potato",
+                "gat_cost":10,
+                "yield":1,
+                "mat_cost":5
+            }
+        ]
+    }, {
+        "name":"Weapon_Enhanced_Matal_IV",
+        "title":"Weapon Enhanced Matal IV",
+        "cft_cost":10,
+        "materials":[
+            {
+                "name":"Enhanced_Ore_Lv4",
+                "title":"Enhanced Ore Lv.4",
+                "source":"Enhanced Ore Lv.4",
+                "gat_cost":50,
+                "yield":8,
+                "mat_cost":15
+            },
+             {
+                "name":"Hinalle",
+                "title":"Hinalle",
+                "source":"White Herb/ Red Herb/ Shining Plant/ Mushroom Spore/ Cherry/ Cucumber/ Grape/ Pumkin",
+                "gat_cost":10,
+                "yield":1,
+                "mat_cost":5
+            }
+        ]
     }
 ]
