@@ -1,17 +1,20 @@
 import { NavLink } from "react-router";
 import { NavigationMenu } from "../Components/NavigationMenu";
+import { getImage } from "../Helpers/ImageHelper";
+
 
 type Props = {
   children: React.ReactNode;
 };
 
 export default function MainLayout({ children }: Props) {
+  console.log(getImage("ragnaroktheneworldhead.png"))
   return (
     <div className="drawer lg:drawer-open">
       <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content">
         <nav className="navbar w-full bg-base-300 justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center sticky top-0 z-50 ">
             <label
               htmlFor="my-drawer-4"
               aria-label="open sidebar"
@@ -32,7 +35,11 @@ export default function MainLayout({ children }: Props) {
                 <path d="M14 10l2 2l-2 2"></path>
               </svg>
             </label>
-            <div className="px-4">ThaiGaneDB.gg</div>
+            <div className="px-4 font-bold">
+              <NavLink to="/">
+              THAIGAMEDB.GG
+              </NavLink>
+            </div>
           </div>
 
           <label className="flex cursor-pointer gap-2">
@@ -85,10 +92,12 @@ export default function MainLayout({ children }: Props) {
             <NavLink to="/row/">
               <li>
                 <div
-                  className="is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default bg-contain
-                 bg-[url(https://static.wikia.nocookie.net/ragnarok_gamepedia_en/images/6/68/Ragnarok2GOTW_logo.png/revision/latest/scale-to-width-down/567?cb=20171024051658)]"
+                  className={`is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default `}
+                    style={{
+                    backgroundImage: `url(${getImage("ragnaroktheneworldhead.png")})`,
+                  }}
                 >
-                  <span className="is-drawer-close:hidden">game1</span>
+                  
                 </div>
               </li>
             </NavLink>

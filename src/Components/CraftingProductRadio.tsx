@@ -9,7 +9,7 @@ type Props = {
 
 export default function CraftingProductRadio(props: Props) {
   return (
-  <div className="tooltip z-20" data-tip={props.name}>
+  <div className="tooltip" data-tip={props.name}>
             <label className="cursor-pointer">
               <input
                 onClick={() => props.resetError()}

@@ -75,7 +75,7 @@ export default function CrafingCalculatorSmeltSection() {
         <h2 className="text-xl">Enchance Material</h2>
         <div className="grid gap-2 grid-cols-4 w-fit">
           {products.map((p,i)=>{
-            return <CraftingProductRadio key={i} image={getImage(p.name)} inputName="smelt_product" inputValue={p.name} name={p.title} resetError={resetError}  />
+            return <CraftingProductRadio key={i} image={getImage(p.name+".png")} inputName="smelt_product" inputValue={p.name} name={p.title} resetError={resetError}  />
           })}
         </div>
         จำนวน

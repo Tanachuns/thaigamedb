@@ -8,5 +8,5 @@ export const images = import.meta.glob(
 );
 
 export const getImage = (name: string) => {
-  return images[`../assets/images/${name}.png`] as string;
+  return images[`../assets/images/${name}`] as string;
 };
