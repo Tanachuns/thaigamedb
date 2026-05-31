@@ -8,6 +8,5 @@ export const images = import.meta.glob(
 );
 
 export const getImage = (name: string) => {
-    console.table(images)
   return images[`../assets/images/${name}.png`] as string;
 };

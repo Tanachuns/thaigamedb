@@ -8,7 +8,6 @@ type Props = {
 }
 
 export default function CraftingProductRadio(props: Props) {
-console.log(props.image)
   return (
   <div className="tooltip z-20" data-tip={props.name}>
             <label className="cursor-pointer">
