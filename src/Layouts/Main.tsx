@@ -1,0 +1,84 @@
+type Props = {
+  children: React.ReactNode;
+};
+
+export default function Main({ children }: Props) {
+  return (
+    <div className="drawer lg:drawer-open">
+      <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        <nav className="navbar w-full bg-base-300">
+          <label
+            htmlFor="my-drawer-4"
+            aria-label="open sidebar"
+            className="btn btn-square btn-ghost"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+              strokeWidth="2"
+              fill="none"
+              stroke="currentColor"
+              className="my-1.5 inline-block size-4"
+            >
+              <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+              <path d="M9 4v16"></path>
+              <path d="M14 10l2 2l-2 2"></path>
+            </svg>
+          </label>
+          <div className="px-4">ThaiGaneDB.gg</div>
+        </nav>
+        <div className="p-4">{children}</div>
+      </div>
+      <div className="drawer-side is-drawer-close:overflow-visible">
+        <label
+          htmlFor="my-drawer-4"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+        <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
+          {/* Sidebar content here */}
+          <ul className="menu w-full grow">
+            {/* List item */}
+            <li>
+              <div
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right min-h-[4em] cursor-default bg-contain
+                 bg-[url(https://static.wikia.nocookie.net/ragnarok_gamepedia_en/images/6/68/Ragnarok2GOTW_logo.png/revision/latest/scale-to-width-down/567?cb=20171024051658)]"
+              >
+                <span className="is-drawer-close:hidden">game1</span>
+              </div>
+            </li>
+            <br />
+            <li>
+              <button
+                className="is-drawer-close:tooltip is-drawer-close:tooltip-right"
+                data-tip="Settings"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z"
+                  />
+                </svg>
+
+                <span className="is-drawer-close:hidden">
+                  Crafting Calculator
+                </span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+}
