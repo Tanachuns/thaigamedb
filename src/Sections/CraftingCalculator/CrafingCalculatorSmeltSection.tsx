@@ -119,7 +119,7 @@ export default function CrafingCalculatorSmeltSection() {
           </p>
         );
       })}
-      <p><b>Stermina ที่ใช้:</b> {result.staminacost}</p>
+      <p className="flex"><img src={getImage("jobstaminaicon.png")} alt="job stamina icon" className="w-5" /><b>Stermina ที่ใช้:</b> {result.staminacost}</p>
     </div>
   );
 }
